@@ -1,0 +1,53 @@
+{
+  "name": "@ciroexam/canadian-bond-math",
+  "version": "0.1.0",
+  "description": "Zero-dependency Canadian bond math: clean price, accrued interest, yield-to-maturity, and Macaulay duration for fixed-income calculations.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "node --experimental-vm-modules --import tsx --test test/*.test.ts",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "keywords": [
+    "bond",
+    "bond-math",
+    "yield-to-maturity",
+    "ytm",
+    "duration",
+    "fixed-income",
+    "canadian-securities",
+    "cire",
+    "ciro",
+    "finance"
+  ],
+  "author": "Rami Mamar",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nots0ggy/canadian-bond-math.git"
+  },
+  "homepage": "https://github.com/nots0ggy/canadian-bond-math",
+  "bugs": {
+    "url": "https://github.com/nots0ggy/canadian-bond-math/issues"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  }
+}
